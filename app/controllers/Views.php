@@ -13,7 +13,11 @@ class Views extends Control
 
   public function update($id)
   {
-    echo "Update view " . $id;
+     if(empty($id)){
+            exit("No se estableció el parametro 'id'");
+        }else{
+            echo $id[2];
+        }
   }
 
 }
