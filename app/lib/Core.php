@@ -29,8 +29,8 @@ class Core
       }
     }
 
-    $this->parameters = $url ? array_values($url) : [];
-    call_user_func_array([$this->controller, $this->method], $this->parameters);
+    $this->parameters = $url ? $url : [];
+    call_user_func_array([$this->controller, $this->method], [$this->parameters]);
   }
 
   public function getUrl()
